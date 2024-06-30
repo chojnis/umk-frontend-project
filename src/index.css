@@ -17,6 +17,7 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  cursor: pointer;
 }
 a:hover {
   color: #535bf2;
@@ -28,6 +29,39 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* background-image: linear-gradient(
+    to right top,
+    #390099,
+    #62008b,
+    #79007d,
+    #890071,
+    #940066,
+    #a00063,
+    #ac005f,
+    #b7005b,
+    #ca005b,
+    #dc005a,
+    #ee0058,
+    #ff0054
+  ); */
+  /* background-image: linear-gradient(
+    to right top,
+    #000000,
+    #0e0408,
+    #170910,
+    #1d0e17,
+    #22111e,
+    #221727,
+    #211d2f,
+    #1e2336,
+    #1a2c38,
+    #203337,
+    #2d3937,
+    #3a3e3b
+  ); */
+  background-color: #fff;
+  background-color: #7be000;
+  overflow-x: hidden;
 }
 
 h1 {
