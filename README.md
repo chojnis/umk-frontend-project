@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Quiz app extended
+## React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Projekt zaliczeniowy na zajęcia z frontendu UMK
 
-Currently, two official plugins are available:
+https://master--relaxed-douhua-9b033a.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Aplikacja generuje Quizy we współpracy z darmowym API https://opentdb.com/. Domyślnie generuje 10 pytań z dowolnych kategorii, można natomiast edytować liczbę pytań, kategorie, a także typ odpowiedzi (wiele lub prawda/fałsz). Po odpowiedzeniu na wszystkie pytania możemy zobaczyć poprawne odpowiedzi oraz zacząć Quiz ponownie.
 
-## Expanding the ESLint configuration
+Spełnione wymagania:
+* React
+* Aplikacja interaktywna
+* W pełni ostylowana i responsywna
+* Uzupełnione readme.md
+* Live preview
+* Ustalona struktura projektu z podziałem na komponenty i oddelegowaniem obowiązków
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+a także:
+* routing
+* fetch do API
+* typescript 
+* react query - opakowanie fetch API, użyte w celu wielokrotnego odpytywania po otrzymaniu HTTP 429 przez limit na IP
+* react spring - biblioteka do tworzenia animacji, użyte w celu stworzenia przyjaznego wyglądu aplikacji
 
-- Configure the top-level `parserOptions` property like this:
+Instalacja w lokalnym środowisku:
+Wymagania:
+* node *w wersji >= 20.9.0
+* npm *w wersji >= 10.1.0
+  
+\*- wersja na której tworzona była aplikacja
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Instalacja zależności:
+```bash
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Uruchomienie środowiska dev:
+```bash
+npm run dev
+```
+
+Budowanie aplikacji:
+```bash
+npm run build
+```
+
+Uruchamianie zbudowanej aplikacji na serwerze vite:
+```bash
+npm run preview
+```
