@@ -19,6 +19,7 @@ export const fetchQuestions = async (
   params.append("amount", amount.toString());
   if (category) params.append("category", category.toString());
   if (difficulty) params.append("difficulty", difficulty);
+  if (type) params.append("type", type);
 
   const response = await fetch(`${BASE_URL}/api.php?` + params);
 

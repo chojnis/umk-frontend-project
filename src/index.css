@@ -11,16 +11,22 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #3b3355;
+  --color-primary-darker: #231f33;
+  --color-secondary: #5d5d81;
+  --color-tertiary: #bfcde0;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-secondary);
   text-decoration: inherit;
   cursor: pointer;
+  transition: color 0.2s;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--color-tertiary);
 }
 
 body {
@@ -29,38 +35,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* background-image: linear-gradient(
-    to right top,
-    #390099,
-    #62008b,
-    #79007d,
-    #890071,
-    #940066,
-    #a00063,
-    #ac005f,
-    #b7005b,
-    #ca005b,
-    #dc005a,
-    #ee0058,
-    #ff0054
-  ); */
-  /* background-image: linear-gradient(
-    to right top,
-    #000000,
-    #0e0408,
-    #170910,
-    #1d0e17,
-    #22111e,
-    #221727,
-    #211d2f,
-    #1e2336,
-    #1a2c38,
-    #203337,
-    #2d3937,
-    #3a3e3b
-  ); */
-  background-color: #fff;
-  background-color: #7be000;
+  background-color: var(--color-primary);
   overflow-x: hidden;
 }
 

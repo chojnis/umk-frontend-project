@@ -28,8 +28,8 @@ export interface CategoryResponse {
 export interface QuestionParams {
   amount: number;
   category?: number;
-  difficulty?: QuestionDifficulty;
-  type?: QuestionType;
+  difficulty?: number;
+  type?: number;
 }
 
 export type QuizState = {
