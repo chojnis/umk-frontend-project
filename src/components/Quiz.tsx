@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import { Question as QuestionType, QuizState } from "../types";
 import Question from "./Question";
 import QuizResult from "./QuizResult";
-import {
-  useTransition,
-  animated,
-  useSpringRef,
-  useSpring,
-} from "@react-spring/web";
+import { useTransition, animated, useSpringRef } from "@react-spring/web";
 
 const colors = ["#826AED", "#C879FF", "#FFB7FF", "#3BF4FB", "#7BE000"];
 
@@ -45,11 +40,7 @@ const Quiz = ({ questions }: { questions: QuestionType[] }) => {
   }, [quizState.answers]);
 
   if (quizState.finished)
-    return (
-      // <animated.div style={springs}>
-      <QuizResult questions={questions} quizState={quizState} />
-      // </animated.div>
-    );
+    return <QuizResult questions={questions} quizState={quizState} />;
 
   return (
     <div id="quiz">

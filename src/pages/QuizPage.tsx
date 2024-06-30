@@ -24,7 +24,9 @@ const QuizPage = () => {
     return (
       <>
         <h1>There was an error while reading questions</h1>
-        <button onClick={() => navigate("/")}>Go back to home page</button>
+        <button className="btn" onClick={() => navigate("/")}>
+          Go back to home page
+        </button>
       </>
     );
   }

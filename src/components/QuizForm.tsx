@@ -70,8 +70,8 @@ const QuizForm = () => {
 
   return (
     <div id="quiz-form">
-      <h1>Welcome to the Quiz App!</h1>
-      <h2>
+      <h1 className="quiz-title">Welcome to the Quiz App!</h1>
+      <h2 className="quiz-subtitle">
         <span>Do you want to solve</span>
         {params.difficulty !== undefined ? (
           <span className="--text-italic --text-bold --text-lowercase">
@@ -85,8 +85,9 @@ const QuizForm = () => {
         </span>
         <span> Quiz with</span>
         <span className="--text-italic --text-bold">
-          {" "}
-          {params.amount} questions
+          {` ${params.amount} ${
+            params.type !== undefined ? types[params.type] : ""
+          } questions`}
         </span>
         ?
       </h2>
